@@ -1,0 +1,26 @@
+<html>
+    <body>
+    <h2 style="color: red;">
+    Hola alumnos estamos viendo nuestra primera plantilla
+    </h2>
+    <p>El nombre del mejor es: {{nombre_persona.upper}} {{apellido_persona.upper}}</p>
+    <p>Estamos viendo el tema de las plantillas a d&iacute;a: {{momento_actual.day}} / {{momento_actual.month}} / {{momento_actual.year}}</p>
+    <p><strong>Temas del curso:</strong></p>
+    <p>
+        <ul>
+
+        {% if temas %}
+            {% for elTema in temas %}
+
+                <li>{{elTema}}</li>
+
+            {% endfor %}
+
+        {% else %}
+            <p>No hay elementos que mostrar</p>        
+        {% endif %}  
+        </ul>
+
+    </p>
+</body>
+</html>
